@@ -1,11 +1,5 @@
-user_data/
-
-# Python bytecode / cache
 __pycache__/
-**/__pycache__/
-**/__pycache__/**
-*.py[cod]
-*$py.class
+*/__pycache__/
+*.pyc
 
-.DS_Store
-
+Miniconda3-latest-MacOSX-x86_64.sh

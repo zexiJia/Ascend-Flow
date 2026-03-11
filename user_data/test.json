@@ -1,0 +1,23 @@
+{
+  "progress_by_date": {
+    "2026-01-15": {
+      "completed": {},
+      "correct": {},
+      "checked": {},
+      "attempts": [
+        {
+          "t": "2026-01-15",
+          "key": "coding:COD.ITEM.0001.V1",
+          "ptype": "coding",
+          "pid": "COD.ITEM.0001.V1",
+          "event": "run_tests",
+          "ok": false,
+          "meta": {
+            "passed": 0,
+            "total": 3
+          }
+        }
+      ]
+    }
+  }
+}
