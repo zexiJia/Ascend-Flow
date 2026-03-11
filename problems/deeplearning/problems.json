@@ -1,0 +1,1254 @@
+[
+  {
+    "item_id": "DL.ITEM.DL01.V1",
+    "title": "激活函数的作用",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "在神经网络中，激活函数的主要作用是什么？",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [
+      "神经网络基础",
+      "激活函数"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.ACT01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=激活函数"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 减少模型参数数量",
+      "B. 引入非线性，使网络能拟合复杂函数",
+      "C. 加速梯度下降收敛",
+      "D. 防止过拟合"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL02.V1",
+    "title": "Batch Normalization位置",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Batch Normalization层通常放在哪里？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "正则化"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.REG02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Batch Normalization"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 在输入层之前",
+      "B. 在卷积/全连接层之后、激活函数之前",
+      "C. 在激活函数之后",
+      "D. 只在最后一层"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL03.V1",
+    "title": "梯度消失原因",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Sigmoid激活函数容易出现梯度消失，主要原因是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.BP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=梯度消失"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 输出范围是(0,1)",
+      "B. 导数最大值只有0.25，连乘会衰减",
+      "C. 计算复杂",
+      "D. 不可微分"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL04.V1",
+    "title": "Softmax输出求和",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "Softmax输出的所有元素之和等于______。",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.LOSS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Softmax"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "1",
+        "1.0"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL05.V1",
+    "title": "Dropout的作用",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "Dropout在训练时随机将部分神经元输出置为______。",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.REG01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Dropout"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "0",
+        "零"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL06.V1",
+    "title": "卷积输出尺寸",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "32×32图像经过kernel=5,stride=1,padding=0的卷积后，输出尺寸是____×____。",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "感受野",
+      "卷积"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.CNN01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=卷积层"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "28"
+      ],
+      "BLANK2": [
+        "28"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL07.V1",
+    "title": "实现ReLU",
+    "domain": "deeplearning",
+    "format": "dl_code",
+    "prompt": "实现ReLU激活函数。",
+    "difficulty": 3,
+    "estimated_time_min": 8,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "正数",
+          "args": [
+            3.0
+          ],
+          "expected": 3.0
+        },
+        {
+          "name": "负数",
+          "args": [
+            -2.5
+          ],
+          "expected": 0
+        },
+        {
+          "name": "零",
+          "args": [
+            0
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.ACT02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=ReLU激活函数"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "code",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "function_name": "relu",
+    "function_signature": "def relu(x: float) -> float:",
+    "starter_code": "def relu(x: float) -> float:\n    pass",
+    "hints": {
+      "1": "max(0, x)"
+    },
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL08.V1",
+    "title": "实现Sigmoid",
+    "domain": "deeplearning",
+    "format": "dl_code",
+    "prompt": "实现Sigmoid激活函数。",
+    "difficulty": 3,
+    "estimated_time_min": 8,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "x=0",
+          "args": [
+            0
+          ],
+          "expected": 0.5
+        },
+        {
+          "name": "x=10",
+          "args": [
+            10
+          ],
+          "expected": 0.9999546021312976
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.ACT03",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Sigmoid"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "code",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "function_name": "sigmoid",
+    "function_signature": "def sigmoid(x: float) -> float:",
+    "starter_code": "import math\ndef sigmoid(x: float) -> float:\n    pass",
+    "hints": {
+      "1": "1/(1+math.exp(-x))"
+    },
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL09.V1",
+    "title": "实现Softmax",
+    "domain": "deeplearning",
+    "format": "dl_code",
+    "prompt": "实现Softmax函数。",
+    "difficulty": 6,
+    "estimated_time_min": 8,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "简单",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            0.09003057317038046,
+            0.24472847105479767,
+            0.6652409557748219
+          ]
+        },
+        {
+          "name": "相等",
+          "args": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.LOSS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Softmax"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "code",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "function_name": "softmax",
+    "function_signature": "def softmax(z: list) -> list:",
+    "starter_code": "import math\ndef softmax(z: list) -> list:\n    pass",
+    "hints": {
+      "1": "先exp再除以总和"
+    },
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL10.V1",
+    "title": "CrossEntropy特点",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "关于CrossEntropy Loss，哪个说法正确？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.LOSS02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=交叉熵损失"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 值域是[0,1]",
+      "B. 预测概率=1时Loss=0",
+      "C. 只能用于二分类",
+      "D. 对所有类别一视同仁"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL11.V1",
+    "title": "过拟合解决方法",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "以下哪个不是解决过拟合的方法？",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.GEN01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=过拟合"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 增加训练数据",
+      "B. 使用Dropout",
+      "C. 增加模型层数",
+      "D. L2正则化"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**C**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL12.V1",
+    "title": "学习率的作用",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "学习率过大会导致什么问题？",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.OPT01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=学习率"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 训练太慢",
+      "B. 容易陷入局部最小",
+      "C. 可能无法收敛，震荡",
+      "D. 模型过拟合"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**C**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL13.V1",
+    "title": "CNN的平移不变性",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "CNN具有平移不变性，主要是因为？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "感受野",
+      "卷积"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 使用了ReLU激活",
+      "B. 卷积核权重共享",
+      "C. 使用了池化层",
+      "D. 使用了全连接层"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL14.V1",
+    "title": "池化层的作用",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "最大池化(Max Pooling)在每个窗口内取______值。",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "感受野",
+      "池化"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.CNN02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=池化层"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "最大",
+        "max",
+        "最大值"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL15.V1",
+    "title": "反向传播原理",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "反向传播算法的核心数学原理是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.BP02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=反向传播"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 泰勒展开",
+      "B. 链式法则",
+      "C. 拉格朗日乘数法",
+      "D. 最小二乘法"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL16.V1",
+    "title": "优化器Adam特点",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Adam优化器的特点是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.OPT02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Adam优化器"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 只使用一阶动量",
+      "B. 只使用二阶动量",
+      "C. 结合一阶和二阶动量",
+      "D. 不使用动量"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**C**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL17.V1",
+    "title": "卷积核数量",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "一个卷积层有32个3×3卷积核，输入3通道，则输出通道数是______。",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "卷积"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.CNN03",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=卷积层参数"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "32"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL18.V1",
+    "title": "RNN的问题",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "标准RNN的主要问题是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.SEQ01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=循环神经网络"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 计算量太大",
+      "B. 难以捕捉长期依赖",
+      "C. 只能处理固定长度输入",
+      "D. 无法并行计算"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL19.V1",
+    "title": "LSTM的设计",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "LSTM有三个门：输入门、______门和输出门。",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.SEQ02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=LSTM"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "遗忘",
+        "forget",
+        "遗忘门"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL20.V1",
+    "title": "Attention机制",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Self-Attention中Q、K、V分别代表？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "Transformer",
+      "注意力机制"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.ATTN01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=注意力机制"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. Query, Key, Value",
+      "B. Question, Knowledge, Validation",
+      "C. Queue, Keep, Vote",
+      "D. Quality, Kind, Variety"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**A**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL21.V1",
+    "title": "Transformer优势",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Transformer相比RNN的主要优势是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "Transformer",
+      "注意力机制"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.ATTN02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=Transformer"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 参数更少",
+      "B. 可并行计算，训练更快",
+      "C. 不需要GPU",
+      "D. 更容易实现"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL22.V1",
+    "title": "实现MSE Loss",
+    "domain": "deeplearning",
+    "format": "dl_code",
+    "prompt": "实现均方误差损失函数。",
+    "difficulty": 3,
+    "estimated_time_min": 8,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 0.0
+        },
+        {
+          "name": "diff",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": 1.0
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.LOSS03",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=均方误差"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "code",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "function_name": "mse_loss",
+    "function_signature": "def mse_loss(y_pred: list, y_true: list) -> float:",
+    "starter_code": "def mse_loss(y_pred: list, y_true: list) -> float:\n    pass",
+    "hints": {
+      "1": "sum((p-t)**2)/len(y_pred)"
+    },
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL23.V1",
+    "title": "ResNet的创新",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "ResNet的核心创新是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "网络架构"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.CNN05",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=残差网络"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 使用更大的卷积核",
+      "B. 引入残差/跳跃连接",
+      "C. 使用Batch Normalization",
+      "D. 使用更深的网络"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL24.V1",
+    "title": "数据增强方法",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "以下哪个不是常见的图像数据增强方法？",
+    "difficulty": 3,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.DATA01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=数据增强"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 随机裁剪",
+      "B. 水平翻转",
+      "C. 改变标签",
+      "D. 颜色抖动"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**C**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL25.V1",
+    "title": "计算卷积参数量",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "3×3卷积，输入64通道，输出128通道，参数量是______（不含bias）。",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "卷积"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "73728"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL26.V1",
+    "title": "Gradient Clipping",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Gradient Clipping的作用是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.OPT03",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=梯度裁剪"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 加速训练",
+      "B. 防止梯度消失",
+      "C. 防止梯度爆炸",
+      "D. 减少参数量"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**C**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL27.V1",
+    "title": "实现L2正则化",
+    "domain": "deeplearning",
+    "format": "dl_code",
+    "prompt": "计算权重的L2正则化项。",
+    "difficulty": 3,
+    "estimated_time_min": 8,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ],
+            0.01
+          ],
+          "expected": 0.07
+        },
+        {
+          "name": "zero",
+          "args": [
+            [
+              0,
+              0,
+              0
+            ],
+            0.1
+          ],
+          "expected": 0.0
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.REG03",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=L2正则化"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "code",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "function_name": "l2_reg",
+    "function_signature": "def l2_reg(weights: list, lambda_: float) -> float:",
+    "starter_code": "def l2_reg(weights: list, lambda_: float) -> float:\n    pass",
+    "hints": {
+      "1": "lambda_*sum(w**2)/2"
+    },
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL28.V1",
+    "title": "Embedding层作用",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "Embedding层的作用是？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.NLP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=词嵌入"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. 降维",
+      "B. 将离散ID转为稠密向量",
+      "C. 归一化",
+      "D. 池化"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**B**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL29.V1",
+    "title": "计算感受野",
+    "domain": "deeplearning",
+    "format": "dl_fill",
+    "prompt": "两个连续的3×3卷积，感受野大小是______×______。",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "CNN",
+      "感受野"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.CNN04",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=感受野"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "BLANK1": [
+        "5"
+      ],
+      "BLANK2": [
+        "5"
+      ]
+    },
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：****\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  },
+  {
+    "item_id": "DL.ITEM.DL30.V1",
+    "title": "模型集成方法",
+    "domain": "deeplearning",
+    "format": "dl_choice",
+    "prompt": "以下哪个是模型集成方法？",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "DL.MIC.ENS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=模型集成"
+      }
+    ],
+    "version": "v1",
+    "problem_type": "choice",
+    "options": [
+      "A. Dropout",
+      "B. Batch Normalization",
+      "C. Bagging",
+      "D. Early Stopping"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "function_name": "",
+    "function_signature": "",
+    "starter_code": "",
+    "hints": {},
+    "explanation": "**这题在考什么**\n\n- 你是否理解该概念在训练/推理中的真实作用，而不是背结论。\n\n**核心结论**\n\n- 正确选项：**C**\n\n**为什么是它（直觉 + 机制）**\n\n- 直觉：它解决了『表达能力/稳定性/泛化』里的关键矛盾。\n- 机制：从计算图/梯度/统计分布角度解释其效果。\n\n**例子（落到一个具体网络里）**\n\n- 举一个最小例子：两层 MLP / 一个卷积块，说明如果没有该机制会发生什么。\n\n**应用场景**\n\n- 什么时候必须用：深层网络、分布漂移、训练不稳定、梯度问题等。\n- 什么时候要慎用：小 batch、推理端统计不一致、数值溢出等。\n\n**常见误区**\n\n- 把“加速收敛”当成唯一理由，忽略本质。\n- 把训练期行为与推理期行为混为一谈（尤其 BN/Dropout）。\n"
+  }
+]

@@ -1,0 +1,1196 @@
+[
+  {
+    "node_id": "MATH.MAC.CALC",
+    "subject": "math",
+    "level": "macro",
+    "type": "skill",
+    "name": "微积分",
+    "difficulty": 4,
+    "parents": [],
+    "prereq": [],
+    "tags": ["calculus"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "微积分是研究函数变化率和累积量的数学分支，包括极限、导数、积分等核心概念。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MAC.LA",
+    "subject": "math",
+    "level": "macro",
+    "type": "skill",
+    "name": "线性代数",
+    "difficulty": 4,
+    "parents": [],
+    "prereq": [],
+    "tags": ["linear_algebra"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "线性代数研究向量空间和线性变换，包括矩阵运算、行列式、特征值等核心内容。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MAC.PROB",
+    "subject": "math",
+    "level": "macro",
+    "type": "skill",
+    "name": "概率论",
+    "difficulty": 4,
+    "parents": [],
+    "prereq": [],
+    "tags": ["probability"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "概率论研究随机现象的数学规律，是机器学习和统计推断的基础。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.CALC_DEF_INT",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "定积分与几何应用",
+    "difficulty": 5,
+    "parents": ["MATH.MAC.CALC"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/definite_integral.md",
+      "content_summary": "定积分表示曲线下方的面积（带符号）。牛顿-莱布尼茨公式将定积分与不定积分联系起来。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "牛顿-莱布尼茨公式：∫[a,b] f(x)dx = F(b) - F(a)",
+        "几何意义：曲线与x轴围成的面积",
+        "常用定积分：∫[0,1] 1/(1+x²) dx = arctan(1) - arctan(0) = π/4",
+        "积分的线性性质"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.CALC_DERIV",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "导数与求导法则",
+    "difficulty": 5,
+    "parents": ["MATH.MAC.CALC"],
+    "prereq": [],
+    "tags": ["derivative"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/math_learn_001.md",
+      "content_summary": "导数描述函数的变化率。掌握基本导数公式和求导法则是微积分的基础。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "常见函数导数：(xⁿ)' = nxⁿ⁻¹, (eˣ)' = eˣ, (ln x)' = 1/x",
+        "三角函数：(sin x)' = cos x, (cos x)' = -sin x",
+        "链式法则：[f(g(x))]' = f'(g(x)) · g'(x)",
+        "乘法法则：(uv)' = u'v + uv'"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.CALC_INT",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "不定积分与积分技巧",
+    "difficulty": 5,
+    "parents": ["MATH.MAC.CALC"],
+    "prereq": [],
+    "tags": ["integral"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/math_learn_002.md",
+      "content_summary": "不定积分是求导的逆运算。掌握换元积分法和分部积分法是求解积分的关键。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "基本积分公式：∫xⁿdx = xⁿ⁺¹/(n+1) + C",
+        "换元积分法：令 u = g(x)，将积分转化为更简单的形式",
+        "分部积分法：∫u dv = uv - ∫v du",
+        "常见换元：∫f(ax+b)dx = F(ax+b)/a + C"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.CALC_LIMIT",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "极限与级数",
+    "difficulty": 5,
+    "parents": ["MATH.MAC.CALC"],
+    "prereq": [],
+    "tags": ["limit", "taylor", "极限", "洛必达", "等价无穷小"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/math_learn_004.md",
+      "content_summary": "极限是微积分的基础概念。掌握极限的计算方法对理解导数和积分至关重要。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "洛必达法则：0/0 或 ∞/∞ 型可对分子分母同时求导",
+        "等价无穷小替换：sin x ~ x, 1-cos x ~ x²/2 (x→0)",
+        "泰勒展开近似",
+        "夹逼准则"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.LA_BASIC",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "矩阵基础运算",
+    "difficulty": 4,
+    "parents": ["MATH.MAC.LA"],
+    "prereq": [],
+    "tags": ["matrix"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/math_learn_006.md",
+      "content_summary": "矩阵是线性代数的核心工具。掌握矩阵的基本运算是理解线性变换的基础。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "矩阵加法：对应元素相加",
+        "矩阵乘法：行×列，结果矩阵的(i,j)元素是第i行与第j列的内积",
+        "单位矩阵I：AI = IA = A",
+        "矩阵转置：(AB)ᵀ = BᵀAᵀ"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.LA_DET_INV",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "行列式与逆矩阵",
+    "difficulty": 5,
+    "parents": ["MATH.MAC.LA"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/la_det_inv.md",
+      "content_summary": "行列式是判断矩阵可逆性的关键。逆矩阵在求解线性方程组中有重要应用。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "2×2行列式：|a b; c d| = ad - bc",
+        "矩阵可逆当且仅当行列式不为0",
+        "逆矩阵公式：A⁻¹ = (1/det(A)) · adj(A)",
+        "AA⁻¹ = A⁻¹A = I"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.PROB_BASIC",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "概率基础与法则",
+    "difficulty": 4,
+    "parents": ["MATH.MAC.PROB"],
+    "prereq": [],
+    "tags": ["probability", "条件概率", "概率", "贝叶斯"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/math_learn_005.md",
+      "content_summary": "概率论研究随机现象的规律。掌握基本概率概念和计算方法是统计学习的基础。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "概率公理：0 ≤ P(A) ≤ 1, P(Ω) = 1",
+        "条件概率：P(A|B) = P(A∩B) / P(B)",
+        "贝叶斯公式：P(A|B) = P(B|A)·P(A) / P(B)",
+        "独立性：P(A∩B) = P(A)·P(B)"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MES.TAYLOR_SERIES",
+    "subject": "math",
+    "level": "meso",
+    "type": "skill",
+    "name": "泰勒展开",
+    "difficulty": 5,
+    "parents": ["MATH.MAC.CALC"],
+    "prereq": [],
+    "tags": ["泰勒展开"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/math/taylor_series.md",
+      "content_summary": "泰勒展开是微积分中的核心工具，可以用多项式来近似任意可微函数。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "泰勒展开式：f(x) ≈ f(a) + f'(a)(x-a) + f''(a)(x-a)²/2! + ...",
+        "麦克劳林展开：泰勒展开在 a=0 处的特例",
+        "余项 Rn：表示近似的误差"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_ATAN",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "反三角函数积分",
+    "difficulty": 4,
+    "parents": ["MATH.MES.CALC_INT"],
+    "prereq": [],
+    "tags": ["反三角函数", "arctan"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "记住 ∫ 1/(1+x²) dx = arctan(x)+C，并能做定积分代入。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_BASIC_INT",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "基本积分公式",
+    "difficulty": 2,
+    "parents": ["MATH.MES.CALC_INT"],
+    "prereq": [],
+    "tags": ["基本积分", "integral"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "熟悉常见原函数并注意不定积分常数项。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_CHAIN",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "链式法则（复合函数求导）",
+    "difficulty": 5,
+    "parents": ["MATH.MES.CALC_DERIV"],
+    "prereq": [],
+    "tags": ["链式法则", "chain_rule"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "掌握复合函数求导：外导乘内导，并能写清中间变量。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_DEF_INT",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "定积分计算",
+    "difficulty": 3,
+    "parents": ["MATH.MES.CALC_DEF_INT"],
+    "prereq": [],
+    "tags": ["基本定积分", "definite_integral"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "先找原函数，再代入上下限并化简。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_EXP_INT",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "指数函数积分",
+    "difficulty": 2,
+    "parents": ["MATH.MES.CALC_INT"],
+    "prereq": [],
+    "tags": ["指数积分", "exp"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "∫ e^x dx = e^x + C。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_GEO",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "几何级数",
+    "difficulty": 4,
+    "parents": ["MATH.MES.CALC_LIMIT"],
+    "prereq": [],
+    "tags": ["几何级数", "geometric_series"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "掌握 1/(1-x)=∑ xⁿ (|x|<1)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_IBP",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "分部积分法",
+    "difficulty": 6,
+    "parents": ["MATH.MES.CALC_INT"],
+    "prereq": [],
+    "tags": ["分部积分", "ibp"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "正确选择 u 与 dv，套用 ∫ u dv = uv - ∫ v du。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_LH",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "洛必达法则",
+    "difficulty": 6,
+    "parents": ["MATH.MES.CALC_LIMIT"],
+    "prereq": [],
+    "tags": ["洛必达法则", "lhospital"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "识别 0/0 或 ∞/∞ 型，按次数求导并检查条件。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_LIMITS",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "重要极限",
+    "difficulty": 4,
+    "parents": ["MATH.MES.CALC_LIMIT"],
+    "prereq": [],
+    "tags": ["重要极限", "limit"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "掌握 sinx/x, (1+1/n)^n 等标准极限及常用推导。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_LOGD",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "对数求导法",
+    "difficulty": 6,
+    "parents": ["MATH.MES.CALC_DERIV"],
+    "prereq": [],
+    "tags": ["对数求导", "log"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "对形如 x^x 先取对数再求导，避免直接套公式。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_QUOT",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "商法则",
+    "difficulty": 4,
+    "parents": ["MATH.MES.CALC_DERIV"],
+    "prereq": [],
+    "tags": ["商法则", "quotient_rule"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "(f/g)'=(f'g-fg')/g²，注意符号与分母平方。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_SERIES",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "麦克劳林级数",
+    "difficulty": 5,
+    "parents": ["MATH.MES.TAYLOR_SERIES"],
+    "prereq": [],
+    "tags": ["泰勒级数", "series"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "记住 eˣ/sin/cos/ln(1+x) 的级数结构与收敛域要点。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_SUB",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "换元积分法",
+    "difficulty": 5,
+    "parents": ["MATH.MES.CALC_INT"],
+    "prereq": [],
+    "tags": ["换元积分", "substitution"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "识别可换元结构，正确处理 du 与常数系数。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_TAYLOR",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "泰勒展开求极限",
+    "difficulty": 6,
+    "parents": ["MATH.MES.TAYLOR_SERIES"],
+    "prereq": [],
+    "tags": ["泰勒展开", "taylor"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "用泰勒展开提取主导项，进行极限/误差估计。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.CALC_TRIG_D",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "三角函数求导",
+    "difficulty": 3,
+    "parents": ["MATH.MES.CALC_DERIV"],
+    "prereq": [],
+    "tags": ["三角函数求导", "trig"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "熟悉 sin/cos/tan 的导数及常见变形。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_CRAMER",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "克莱姆法则",
+    "difficulty": 4,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["克莱姆法则", "cramer"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "系数矩阵为方阵且 det(A)≠0 才能使用。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_DET2",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "二阶行列式",
+    "difficulty": 2,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["二阶行列式", "det"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "二阶行列式 ad-bc。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_EIG",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "特征值计算",
+    "difficulty": 5,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["特征值", "eigen"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "通过 det(A-λI)=0 求特征值；上三角矩阵特征值是对角元。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_INV",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "可逆矩阵判定",
+    "difficulty": 5,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["可逆矩阵", "invertible"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "det≠0, 满秩, 0特征值不存在, Ax=0 只有零解 等等互相等价。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_INV_RULE",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "矩阵乘积的逆",
+    "difficulty": 3,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["逆矩阵", "inverse"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "(AB)⁻¹=B⁻¹A⁻¹。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_LINDEP",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "线性相关性",
+    "difficulty": 4,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["线性相关", "linear_dependence"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "存在不全为0系数使线性组合为0 → 线性相关。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_LU",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "LU分解",
+    "difficulty": 4,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["LU分解", "lu"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "A=LU，L 为下三角，U 为上三角。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_MATMUL",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "矩阵乘法维度规则",
+    "difficulty": 3,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["矩阵乘法", "matmul"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "m×n 乘 n×p 得 m×p，内维必须相同。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_ORTH",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "正交矩阵",
+    "difficulty": 4,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["正交矩阵", "orthogonal"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "AᵀA=I，且 A⁻¹=Aᵀ。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_RANK",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "矩阵的秩",
+    "difficulty": 4,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["矩阵的秩", "rank"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "rank(A)≤min(m,n)，并与解的个数相关。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_RANK_SOL",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "秩与方程组可解性",
+    "difficulty": 5,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["秩判别", "rank"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "Ax=b 有解 ⇔ rank(A)=rank([A|b])。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_SIM",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "相似矩阵",
+    "difficulty": 5,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["相似矩阵", "similar"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "相似→特征值/行列式/迹/秩等不变量相同。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_SPACE",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "向量空间维数",
+    "difficulty": 3,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["向量空间", "vector_space"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "子空间维数≤母空间维数。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_TRACE",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "矩阵的迹",
+    "difficulty": 4,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["矩阵的迹", "trace"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "tr(AB)=tr(BA)（维度匹配前提下）。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.LA_TRANSPOSE",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "转置法则",
+    "difficulty": 3,
+    "parents": ["MATH.MES.LA_BASIC"],
+    "prereq": [],
+    "tags": ["转置", "transpose"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "(AB)ᵀ=BᵀAᵀ，顺序要反。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_BAYES",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "贝叶斯公式",
+    "difficulty": 6,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["贝叶斯公式", "bayes"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "把后验写成：P(A|B)=P(B|A)P(A)/P(B)，并正确算 P(B)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_BINOM",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "二项分布",
+    "difficulty": 4,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["二项分布", "binomial"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "P(X=k)=C(n,k)pᵏ(1-p)ⁿ⁻ᵏ，常见边界 k=0。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_CLASSIC",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "古典概率",
+    "difficulty": 2,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["古典概率", "classic"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "P(A)=|A|/|Ω|，等可能样本空间下用计数求概率。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_COND",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "条件概率",
+    "difficulty": 4,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["条件概率", "conditional"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "P(B|A)=P(A∩B)/P(A) 以及常见变形。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_COV",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "协方差",
+    "difficulty": 5,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["协方差", "covariance"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "Cov(X,Y)=E[XY]-E[X]E[Y]；独立→协方差为0。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_DISJ",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "互斥事件",
+    "difficulty": 2,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["互斥事件", "disjoint"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "互斥→P(A∪B)=P(A)+P(B)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_EX",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "数学期望",
+    "difficulty": 3,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["期望", "expectation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "理解期望的线性性质与常见分布的期望公式。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_INDEP",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "独立事件",
+    "difficulty": 3,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["独立事件", "independent"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "独立→P(A∩B)=P(A)P(B)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_LLN",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "大数定律",
+    "difficulty": 5,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["大数定律", "lln"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "样本均值依概率收敛到期望，理解含义而非只背定义。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_NORMAL",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "正态分布",
+    "difficulty": 4,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["正态分布", "normal"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "掌握 N(μ,σ²) 的对称性、期望与方差等性质。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_PERM",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "排列",
+    "difficulty": 3,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["排列", "permutation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "排列 A(n,k)=n!/(n-k)!，注意有序与无序区别。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_POIS",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "泊松分布",
+    "difficulty": 4,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["泊松分布", "poisson"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "E(X)=λ, Var(X)=λ。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_TOTAL",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "全概率公式",
+    "difficulty": 5,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["全概率公式", "total_probability"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "按分情况讨论：P(B)=∑ P(Aᵢ)P(B|Aᵢ)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "MATH.MIC.PROB_VAR",
+    "subject": "math",
+    "level": "micro",
+    "type": "skill",
+    "name": "方差",
+    "difficulty": 4,
+    "parents": ["MATH.MES.PROB_BASIC"],
+    "prereq": [],
+    "tags": ["方差", "variance"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "Var(aX+b)=a²Var(X)；区分 σ 与 σ²。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  }
+]
