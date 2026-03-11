@@ -1,0 +1,2064 @@
+[
+  {
+    "item_id": "COD.ITEM.0001.V1",
+    "title": "Two Sum",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定整数数组 `nums` 和整数 `target`，返回两个下标 `[i, j]`，使得 `nums[i] + nums[j] == target`。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [
+      "哈希表",
+      "数组"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              2,
+              7,
+              11,
+              15
+            ],
+            9
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "dup",
+          "args": [
+            [
+              3,
+              3
+            ],
+            6
+          ],
+          "expected": [
+            0,
+            1
+          ]
+        },
+        {
+          "name": "neg",
+          "args": [
+            [
+              -1,
+              -2,
+              -3,
+              -4,
+              -5
+            ],
+            -8
+          ],
+          "expected": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.HASH01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=哈希表"
+      }
+    ],
+    "version": "v1",
+    "function_name": "two_sum",
+    "function_signature": "def two_sum(nums: list[int], target: int) -> list[int]:",
+    "starter_code": "def two_sum(nums: list[int], target: int) -> list[int]:\n    pass",
+    "hints": {
+      "1": "用哈希表记录已见过的数",
+      "2": "对每个数检查 target-x 是否在哈希表中",
+      "3": "seen={}; for i,x: need=target-x"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：哈希表\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[2, 7, 11, 15], 9]`\n- 输出应为：`[0, 1]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0020.V1",
+    "title": "Valid Parentheses",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定只包含 `()[]{}` 的字符串，判断括号是否有效。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [
+      "栈",
+      "字符串"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "ok1",
+          "args": [
+            "()"
+          ],
+          "expected": true
+        },
+        {
+          "name": "ok2",
+          "args": [
+            "()[]{}"
+          ],
+          "expected": true
+        },
+        {
+          "name": "bad1",
+          "args": [
+            "(]"
+          ],
+          "expected": false
+        },
+        {
+          "name": "bad2",
+          "args": [
+            "([)]"
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.STK01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=栈"
+      }
+    ],
+    "version": "v1",
+    "function_name": "is_valid",
+    "function_signature": "def is_valid(s: str) -> bool:",
+    "starter_code": "def is_valid(s: str) -> bool:\n    pass",
+    "hints": {
+      "1": "用栈",
+      "2": "遇左括号压栈，遇右括号检查栈顶",
+      "3": "pairs={')':'(',']':'[','}':'{'}"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：栈\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`['()']`\n- 输出应为：`True`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0021.V1",
+    "title": "Merge Sorted Arrays",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定两个升序数组 `a` 和 `b`，返回合并后的升序数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              3,
+              4
+            ]
+          ],
+          "expected": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "name": "empty",
+          "args": [
+            [],
+            [
+              0
+            ]
+          ],
+          "expected": [
+            0
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.TP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=双指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "merge_sorted",
+    "function_signature": "def merge_sorted(a: list[int], b: list[int]) -> list[int]:",
+    "starter_code": "def merge_sorted(a: list[int], b: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "双指针",
+      "2": "i,j分别指向a,b",
+      "3": "谁小先放"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 4], [1, 3, 4]]`\n- 输出应为：`[1, 1, 2, 3, 4, 4]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0053.V1",
+    "title": "Maximum Subarray",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定整数数组 `nums`，找到具有最大和的连续子数组，返回其最大和。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [
+      "动态规划",
+      "DP",
+      "数组"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              -2,
+              1,
+              -3,
+              4,
+              -1,
+              2,
+              1,
+              -5,
+              4
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "name": "single",
+          "args": [
+            [
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "name": "allneg",
+          "args": [
+            [
+              -3,
+              -1,
+              -2
+            ]
+          ],
+          "expected": -1
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.DP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=动态规划/Kadane"
+      }
+    ],
+    "version": "v1",
+    "function_name": "max_subarray",
+    "function_signature": "def max_subarray(nums: list[int]) -> int:",
+    "starter_code": "def max_subarray(nums: list[int]) -> int:\n    pass",
+    "hints": {
+      "1": "Kadane算法",
+      "2": "best_end=max(x, best_end+x)",
+      "3": "追踪全局最大"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：动态规划\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[-2, 1, -3, 4, -1, 2, 1, -5, 4]]`\n- 输出应为：`6`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0066.V1",
+    "title": "Plus One",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定由数字组成的数组 `digits`，将其表示的整数加1，返回结果数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "name": "carry",
+          "args": [
+            [
+              4,
+              3,
+              2,
+              1
+            ]
+          ],
+          "expected": [
+            4,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "all9",
+          "args": [
+            [
+              9,
+              9,
+              9
+            ]
+          ],
+          "expected": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.SIM01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=模拟进位"
+      }
+    ],
+    "version": "v1",
+    "function_name": "plus_one",
+    "function_signature": "def plus_one(digits: list[int]) -> list[int]:",
+    "starter_code": "def plus_one(digits: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "从后往前",
+      "2": "遇9变0继续",
+      "3": "全是9则返回[1]+digits"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3]]`\n- 输出应为：`[1, 2, 4]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0070.V1",
+    "title": "Climbing Stairs",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "每次可以爬1或2个台阶，爬到第n阶有多少种方法？",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [
+      "动态规划",
+      "DP"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "n2",
+          "args": [
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "name": "n3",
+          "args": [
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "name": "n5",
+          "args": [
+            5
+          ],
+          "expected": 8
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.DP02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=动态规划"
+      }
+    ],
+    "version": "v1",
+    "function_name": "climb_stairs",
+    "function_signature": "def climb_stairs(n: int) -> int:",
+    "starter_code": "def climb_stairs(n: int) -> int:\n    pass",
+    "hints": {
+      "1": "dp[i]=dp[i-1]+dp[i-2]",
+      "2": "base: dp[1]=1, dp[2]=2",
+      "3": "可以只用两个变量"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：动态规划\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[2]`\n- 输出应为：`2`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0121.V1",
+    "title": "Best Time Buy Sell Stock",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定股票价格数组，只能买卖一次，求最大利润。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              7,
+              1,
+              5,
+              3,
+              6,
+              4
+            ]
+          ],
+          "expected": 5
+        },
+        {
+          "name": "down",
+          "args": [
+            [
+              7,
+              6,
+              4,
+              3,
+              1
+            ]
+          ],
+          "expected": 0
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.GREEDY01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=贪心"
+      }
+    ],
+    "version": "v1",
+    "function_name": "max_profit",
+    "function_signature": "def max_profit(prices: list[int]) -> int:",
+    "starter_code": "def max_profit(prices: list[int]) -> int:\n    pass",
+    "hints": {
+      "1": "记录min_price",
+      "2": "每天计算profit=price-min_price",
+      "3": "更新max_profit"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[7, 1, 5, 3, 6, 4]]`\n- 输出应为：`5`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0136.V1",
+    "title": "Single Number",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "数组中每个元素出现两次，只有一个出现一次，找出它。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              2,
+              2,
+              1
+            ]
+          ],
+          "expected": 1
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              4,
+              1,
+              2,
+              1,
+              2
+            ]
+          ],
+          "expected": 4
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.BIT01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=位运算/异或"
+      }
+    ],
+    "version": "v1",
+    "function_name": "single_number",
+    "function_signature": "def single_number(nums: list[int]) -> int:",
+    "starter_code": "def single_number(nums: list[int]) -> int:\n    pass",
+    "hints": {
+      "1": "异或所有数",
+      "2": "a^a=0",
+      "3": "result=0; for x: result^=x"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[2, 2, 1]]`\n- 输出应为：`1`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0141.V1",
+    "title": "Linked List Cycle",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "判断链表是否有环。用数组模拟：next_arr[i]表示节点i的下一个节点，-1表示null。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "cycle",
+          "args": [
+            [
+              1,
+              2,
+              0
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "name": "nocycle",
+          "args": [
+            [
+              1,
+              2,
+              -1
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.FS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=快慢指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "has_cycle",
+    "function_signature": "def has_cycle(next_arr: list[int]) -> bool:",
+    "starter_code": "def has_cycle(next_arr: list[int]) -> bool:\n    pass",
+    "hints": {
+      "1": "快慢指针",
+      "2": "fast每次走2步",
+      "3": "相遇则有环"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 0]]`\n- 输出应为：`True`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0160.V1",
+    "title": "Intersection of Arrays",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "找两个数组的第一个公共元素下标。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              3,
+              4
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "name": "none",
+          "args": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "expected": -1
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.SET01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=哈希集合"
+      }
+    ],
+    "version": "v1",
+    "function_name": "get_intersection",
+    "function_signature": "def get_intersection(a: list[int], b: list[int]) -> int:",
+    "starter_code": "def get_intersection(a: list[int], b: list[int]) -> int:\n    pass",
+    "hints": {
+      "1": "用set存一个数组",
+      "2": "遍历另一个查找",
+      "3": "返回第一个公共元素下标"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3, 4], [5, 3, 4]]`\n- 输出应为：`2`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0169.V1",
+    "title": "Majority Element",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "找出数组中出现次数超过n/2的元素。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              3,
+              2,
+              3
+            ]
+          ],
+          "expected": 3
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              2,
+              2,
+              1,
+              1,
+              1,
+              2,
+              2
+            ]
+          ],
+          "expected": 2
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.VOTE01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=摩尔投票"
+      }
+    ],
+    "version": "v1",
+    "function_name": "majority_element",
+    "function_signature": "def majority_element(nums: list[int]) -> int:",
+    "starter_code": "def majority_element(nums: list[int]) -> int:\n    pass",
+    "hints": {
+      "1": "摩尔投票",
+      "2": "count=0时换候选",
+      "3": "相同+1，不同-1"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[3, 2, 3]]`\n- 输出应为：`3`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0206.V1",
+    "title": "Reverse List",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "反转数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "expected": [
+            5,
+            4,
+            3,
+            2,
+            1
+          ]
+        },
+        {
+          "name": "empty",
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.ARR01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=指针反转"
+      }
+    ],
+    "version": "v1",
+    "function_name": "reverse_list",
+    "function_signature": "def reverse_list(nums: list[int]) -> list[int]:",
+    "starter_code": "def reverse_list(nums: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "双指针",
+      "2": "或直接nums[::-1]",
+      "3": "原地反转用swap"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3, 4, 5]]`\n- 输出应为：`[5, 4, 3, 2, 1]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0217.V1",
+    "title": "Contains Duplicate",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "判断数组是否存在重复元素。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "dup",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "name": "nodup",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.SET01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=哈希集合"
+      }
+    ],
+    "version": "v1",
+    "function_name": "contains_duplicate",
+    "function_signature": "def contains_duplicate(nums: list[int]) -> bool:",
+    "starter_code": "def contains_duplicate(nums: list[int]) -> bool:\n    pass",
+    "hints": {
+      "1": "用set",
+      "2": "len(set(nums))<len(nums)",
+      "3": "或边遍历边检查"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3, 1]]`\n- 输出应为：`True`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0234.V1",
+    "title": "Palindrome Check",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "判断数组是否是回文。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "yes",
+          "args": [
+            [
+              1,
+              2,
+              2,
+              1
+            ]
+          ],
+          "expected": true
+        },
+        {
+          "name": "no",
+          "args": [
+            [
+              1,
+              2
+            ]
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.TP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=双指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "is_palindrome",
+    "function_signature": "def is_palindrome(nums: list[int]) -> bool:",
+    "starter_code": "def is_palindrome(nums: list[int]) -> bool:\n    pass",
+    "hints": {
+      "1": "nums==nums[::-1]",
+      "2": "或双指针",
+      "3": "首尾比较"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 2, 1]]`\n- 输出应为：`True`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0283.V1",
+    "title": "Move Zeroes",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "将数组中的0移到末尾，保持非零元素相对顺序。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              0,
+              1,
+              0,
+              3,
+              12
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            12,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "allzero",
+          "args": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.TP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=双指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "move_zeroes",
+    "function_signature": "def move_zeroes(nums: list[int]) -> list[int]:",
+    "starter_code": "def move_zeroes(nums: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "双指针",
+      "2": "非零元素往前移",
+      "3": "最后补0"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[0, 1, 0, 3, 12]]`\n- 输出应为：`[1, 3, 12, 0, 0]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0344.V1",
+    "title": "Reverse String",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "原地反转字符数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              "h",
+              "e",
+              "l",
+              "l",
+              "o"
+            ]
+          ],
+          "expected": [
+            "o",
+            "l",
+            "l",
+            "e",
+            "h"
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.TP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=双指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "reverse_string",
+    "function_signature": "def reverse_string(s: list[str]) -> list[str]:",
+    "starter_code": "def reverse_string(s: list[str]) -> list[str]:\n    pass",
+    "hints": {
+      "1": "双指针",
+      "2": "swap首尾",
+      "3": "或s[::-1]"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[['h', 'e', 'l', 'l', 'o']]`\n- 输出应为：`['o', 'l', 'l', 'e', 'h']`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0349.V1",
+    "title": "Array Intersection",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "返回两个数组的交集（去重）。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "expected": [
+            2
+          ]
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              4,
+              9,
+              5
+            ],
+            [
+              9,
+              4,
+              9,
+              8,
+              4
+            ]
+          ],
+          "expected": [
+            4,
+            9
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.SET02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=集合运算"
+      }
+    ],
+    "version": "v1",
+    "function_name": "intersection",
+    "function_signature": "def intersection(nums1: list[int], nums2: list[int]) -> list[int]:",
+    "starter_code": "def intersection(nums1: list[int], nums2: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "set(nums1) & set(nums2)",
+      "2": "转list返回",
+      "3": "注意去重"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 2, 1], [2, 2]]`\n- 输出应为：`[2]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0387.V1",
+    "title": "First Unique Char",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "找字符串中第一个不重复的字符的下标。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            "leetcode"
+          ],
+          "expected": 0
+        },
+        {
+          "name": "basic2",
+          "args": [
+            "loveleetcode"
+          ],
+          "expected": 2
+        },
+        {
+          "name": "none",
+          "args": [
+            "aabb"
+          ],
+          "expected": -1
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.CNT01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=哈希计数"
+      }
+    ],
+    "version": "v1",
+    "function_name": "first_uniq_char",
+    "function_signature": "def first_uniq_char(s: str) -> int:",
+    "starter_code": "def first_uniq_char(s: str) -> int:\n    pass",
+    "hints": {
+      "1": "Counter统计",
+      "2": "遍历找count==1",
+      "3": "返回下标"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`['leetcode']`\n- 输出应为：`0`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0412.V1",
+    "title": "Fizz Buzz",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "返回1到n的FizzBuzz结果数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "n3",
+          "args": [
+            3
+          ],
+          "expected": [
+            "1",
+            "2",
+            "Fizz"
+          ]
+        },
+        {
+          "name": "n5",
+          "args": [
+            5
+          ],
+          "expected": [
+            "1",
+            "2",
+            "Fizz",
+            "4",
+            "Buzz"
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.CTRL01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=条件判断"
+      }
+    ],
+    "version": "v1",
+    "function_name": "fizz_buzz",
+    "function_signature": "def fizz_buzz(n: int) -> list[str]:",
+    "starter_code": "def fizz_buzz(n: int) -> list[str]:\n    pass",
+    "hints": {
+      "1": "先判断15的倍数",
+      "2": "再判断3和5",
+      "3": "否则返回数字"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[3]`\n- 输出应为：`['1', '2', 'Fizz']`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0448.V1",
+    "title": "Find Disappeared Numbers",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "找出1到n中没有出现在数组中的数字。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              4,
+              3,
+              2,
+              7,
+              8,
+              2,
+              3,
+              1
+            ]
+          ],
+          "expected": [
+            5,
+            6
+          ]
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            2
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.INPLACE01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=原地标记"
+      }
+    ],
+    "version": "v1",
+    "function_name": "find_disappeared",
+    "function_signature": "def find_disappeared(nums: list[int]) -> list[int]:",
+    "starter_code": "def find_disappeared(nums: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "用set",
+      "2": "或原地标记",
+      "3": "set(1..n)-set(nums)"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[4, 3, 2, 7, 8, 2, 3, 1]]`\n- 输出应为：`[5, 6]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0509.V1",
+    "title": "Fibonacci Number",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "计算第n个斐波那契数。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [
+      "动态规划",
+      "DP"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "n2",
+          "args": [
+            2
+          ],
+          "expected": 1
+        },
+        {
+          "name": "n3",
+          "args": [
+            3
+          ],
+          "expected": 2
+        },
+        {
+          "name": "n10",
+          "args": [
+            10
+          ],
+          "expected": 55
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.DP02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=动态规划"
+      }
+    ],
+    "version": "v1",
+    "function_name": "fib",
+    "function_signature": "def fib(n: int) -> int:",
+    "starter_code": "def fib(n: int) -> int:\n    pass",
+    "hints": {
+      "1": "f(0)=0, f(1)=1",
+      "2": "f(n)=f(n-1)+f(n-2)",
+      "3": "迭代更高效"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：动态规划\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[2]`\n- 输出应为：`1`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0704.V1",
+    "title": "Binary Search",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "在有序数组中查找目标值，返回下标。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "found",
+          "args": [
+            [
+              -1,
+              0,
+              3,
+              5,
+              9,
+              12
+            ],
+            9
+          ],
+          "expected": 4
+        },
+        {
+          "name": "notfound",
+          "args": [
+            [
+              -1,
+              0,
+              3,
+              5,
+              9,
+              12
+            ],
+            2
+          ],
+          "expected": -1
+        }
+      ],
+      "complexity": "O(log n)"
+    },
+    "variation_axes": [
+      "boundary_template",
+      "predicate_design"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.BS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "边界/终止性"
+      },
+      {
+        "node_id": "COD.MIC.BS02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "把查找条件写成单调谓词"
+      }
+    ],
+    "version": "v1",
+    "function_name": "binary_search",
+    "function_signature": "def binary_search(nums: list[int], target: int) -> int:",
+    "starter_code": "def binary_search(nums: list[int], target: int) -> int:\n    pass",
+    "hints": {
+      "1": "left, right指针",
+      "2": "mid = (left+right)//2",
+      "3": "比较调整边界"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[-1, 0, 3, 5, 9, 12], 9]`\n- 输出应为：`4`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0876.V1",
+    "title": "Middle of List",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "返回数组中间位置的元素下标。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "odd",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "expected": 2
+        },
+        {
+          "name": "even",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "expected": 3
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.FS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=快慢指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "middle_node",
+    "function_signature": "def middle_node(nums: list[int]) -> int:",
+    "starter_code": "def middle_node(nums: list[int]) -> int:\n    pass",
+    "hints": {
+      "1": "len(nums)//2",
+      "2": "或快慢指针",
+      "3": "偶数取后一个"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3, 4, 5]]`\n- 输出应为：`2`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0977.V1",
+    "title": "Sorted Squares",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "返回有序数组每个数平方后的有序数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              -4,
+              -1,
+              0,
+              3,
+              10
+            ]
+          ],
+          "expected": [
+            0,
+            1,
+            9,
+            16,
+            100
+          ]
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              -7,
+              -3,
+              2,
+              3,
+              11
+            ]
+          ],
+          "expected": [
+            4,
+            9,
+            9,
+            49,
+            121
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.TP01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=双指针"
+      }
+    ],
+    "version": "v1",
+    "function_name": "sorted_squares",
+    "function_signature": "def sorted_squares(nums: list[int]) -> list[int]:",
+    "starter_code": "def sorted_squares(nums: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "sorted([x*x for x in nums])",
+      "2": "或双指针O(n)",
+      "3": "从两端取较大的"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[-4, -1, 0, 3, 10]]`\n- 输出应为：`[0, 1, 9, 16, 100]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.1108.V1",
+    "title": "Defang IP Address",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "将IP地址中的.替换为[.]",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            "1.1.1.1"
+          ],
+          "expected": "1[.]1[.]1[.]1"
+        },
+        {
+          "name": "basic2",
+          "args": [
+            "255.100.50.0"
+          ],
+          "expected": "255[.]100[.]50[.]0"
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.STR01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=字符串替换"
+      }
+    ],
+    "version": "v1",
+    "function_name": "defang_ip",
+    "function_signature": "def defang_ip(address: str) -> str:",
+    "starter_code": "def defang_ip(address: str) -> str:\n    pass",
+    "hints": {
+      "1": "replace方法",
+      "2": "address.replace('.','[.]')",
+      "3": "一行搞定"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`['1.1.1.1']`\n- 输出应为：`1[.]1[.]1[.]1`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.1342.V1",
+    "title": "Steps to Zero",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "将数字变为0需要多少步。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "n14",
+          "args": [
+            14
+          ],
+          "expected": 6
+        },
+        {
+          "name": "n8",
+          "args": [
+            8
+          ],
+          "expected": 4
+        },
+        {
+          "name": "n123",
+          "args": [
+            123
+          ],
+          "expected": 12
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.SIM02",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=模拟"
+      }
+    ],
+    "version": "v1",
+    "function_name": "num_steps",
+    "function_signature": "def num_steps(num: int) -> int:",
+    "starter_code": "def num_steps(num: int) -> int:\n    pass",
+    "hints": {
+      "1": "模拟",
+      "2": "while num>0",
+      "3": "偶数//2，奇数-1"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[14]`\n- 输出应为：`6`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.1480.V1",
+    "title": "Running Sum",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "返回数组的累加和数组。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "expected": [
+            1,
+            3,
+            6,
+            10
+          ]
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.PS01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=前缀和"
+      }
+    ],
+    "version": "v1",
+    "function_name": "running_sum",
+    "function_signature": "def running_sum(nums: list[int]) -> list[int]:",
+    "starter_code": "def running_sum(nums: list[int]) -> list[int]:\n    pass",
+    "hints": {
+      "1": "累加",
+      "2": "itertools.accumulate",
+      "3": "或手动循环"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：常用数据结构/算法\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3, 4]]`\n- 输出应为：`[1, 3, 6, 10]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.1672.V1",
+    "title": "Richest Customer",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定m×n矩阵表示每个客户在各银行的存款，返回最富有客户的财富值。",
+    "difficulty": 3,
+    "estimated_time_min": 12,
+    "tags": [
+      "数组",
+      "遍历"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                3,
+                2,
+                1
+              ]
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "name": "basic2",
+          "args": [
+            [
+              [
+                1,
+                5
+              ],
+              [
+                7,
+                3
+              ],
+              [
+                3,
+                5
+              ]
+            ]
+          ],
+          "expected": 10
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.REDUCE01",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=数组遍历"
+      }
+    ],
+    "version": "v1",
+    "function_name": "max_wealth",
+    "function_signature": "def max_wealth(accounts: list[list[int]]) -> int:",
+    "starter_code": "def max_wealth(accounts: list[list[int]]) -> int:\n    pass",
+    "hints": {
+      "1": "max(sum(row) for row in accounts)",
+      "2": "遍历求和",
+      "3": "取最大值"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：数组\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[[1, 2, 3], [3, 2, 1]]]`\n- 输出应为：`6`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0046.V1",
+    "title": "Permutations",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定不含重复数字的数组 `nums`，返回其所有可能的全排列。",
+    "difficulty": 6,
+    "estimated_time_min": 18,
+    "tags": [
+      "回溯",
+      "DFS",
+      "排列组合"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              3,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              3,
+              1,
+              2
+            ],
+            [
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "name": "single",
+          "args": [
+            [
+              1
+            ]
+          ],
+          "expected": [
+            [
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.BT01",
+        "role": "primary",
+        "weight": 3,
+        "evidence": "全排列 DFS + used"
+      }
+    ],
+    "version": "v1",
+    "function_name": "permute",
+    "function_signature": "def permute(nums: list[int]) -> list[list[int]]:",
+    "starter_code": "def permute(nums: list[int]) -> list[list[int]]:\n    pass",
+    "hints": {
+      "1": "回溯：选择→递归→撤销",
+      "2": "用used数组标记已使用元素",
+      "3": "path长度等于nums长度时记录结果"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：回溯\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3]]`\n- 输出应为：`[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0078.V1",
+    "title": "Subsets",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定整数数组 `nums`，返回其所有可能的子集。",
+    "difficulty": 6,
+    "estimated_time_min": 18,
+    "tags": [
+      "回溯",
+      "DFS",
+      "子集"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            [],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "name": "single",
+          "args": [
+            [
+              0
+            ]
+          ],
+          "expected": [
+            [],
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.BT02",
+        "role": "primary",
+        "weight": 3,
+        "evidence": "子集枚举 start 模板"
+      }
+    ],
+    "version": "v1",
+    "function_name": "subsets",
+    "function_signature": "def subsets(nums: list[int]) -> list[list[int]]:",
+    "starter_code": "def subsets(nums: list[int]) -> list[list[int]]:\n    pass",
+    "hints": {
+      "1": "每个元素选或不选",
+      "2": "用start参数避免重复",
+      "3": "每个path都是一个子集"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：回溯\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[[1, 2, 3]]`\n- 输出应为：`[[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  },
+  {
+    "item_id": "COD.ITEM.0077.V1",
+    "title": "Combinations",
+    "domain": "coding",
+    "format": "coding_function",
+    "prompt": "给定 `n` 和 `k`，返回从 1 到 n 中选 k 个数的所有组合。",
+    "difficulty": 6,
+    "estimated_time_min": 18,
+    "tags": [
+      "回溯",
+      "DFS",
+      "排列组合"
+    ],
+    "grader": {
+      "type": "unit_tests",
+      "tests": [
+        {
+          "name": "basic",
+          "args": [
+            4,
+            2
+          ],
+          "expected": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "name": "n2k1",
+          "args": [
+            2,
+            1
+          ],
+          "expected": [
+            [
+              1
+            ],
+            [
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "COD.MIC.BT03",
+        "role": "primary",
+        "weight": 3,
+        "evidence": "组合枚举 + 剪枝"
+      }
+    ],
+    "version": "v1",
+    "function_name": "combine",
+    "function_signature": "def combine(n: int, k: int) -> list[list[int]]:",
+    "starter_code": "def combine(n: int, k: int) -> list[list[int]]:\n    pass",
+    "hints": {
+      "1": "回溯+剪枝",
+      "2": "从start开始选择避免重复",
+      "3": "path长度等于k时记录"
+    },
+    "explanation": "**这题在考什么**\n\n- 关键词：回溯\n- 目标：把题意翻译成可执行的『数据结构 + 不变量/循环』。\n\n**核心思路**\n\n- 先想清楚：每一步要维护什么信息（例如：已见元素、栈顶匹配、窗口内计数）。\n- 再选数据结构：哈希表/栈/双指针/队列/二分等。\n\n**推荐解法（步骤）**\n\n1. 定义状态：你需要保存哪些中间信息？\n2. 单次迭代更新状态，并在合适时刻返回答案。\n3. 写完后用样例手推 3~5 步，确认无边界问题。\n\n**复杂度**\n\n- 时间：通常为 $O(n)$ 或 $O(n\\log n)$（取决于是否排序/二分）。\n- 空间：通常为 $O(n)$（如果需要辅助结构）。\n\n\n**例子（走一遍）**\n\n- 输入：`[4, 2]`\n- 输出应为：`[[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]`\n\n**应用场景**\n\n- 本质是“在线处理/匹配/查找”，工程里常见于：去重、索引、解析括号结构、滑动统计、任务调度等。\n\n**常见坑**\n\n- 边界：空输入、重复元素、负数、最后一次更新。\n- 返回值格式：下标/顺序/是否允许同一元素使用两次。\n- 写对思路但漏了更新时机（比如先查再写 vs 先写再查）。\n"
+  }
+]

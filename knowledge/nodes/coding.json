@@ -1,0 +1,856 @@
+[
+  {
+    "node_id": "COD.MAC.DATA_STRUCT",
+    "subject": "coding",
+    "level": "macro",
+    "type": "skill",
+    "name": "数据结构",
+    "difficulty": 3,
+    "parents": [],
+    "prereq": [],
+    "tags": ["hash", "stack", "set"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "数据结构是组织和存储数据的方式，选择合适的数据结构是解决算法问题的关键。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MAC.PATTERNS",
+    "subject": "coding",
+    "level": "macro",
+    "type": "skill",
+    "name": "算法模式",
+    "difficulty": 4,
+    "parents": [],
+    "prereq": [],
+    "tags": ["two_pointers", "dp", "greedy", "backtracking"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "常见算法模式包括双指针、动态规划、贪心、回溯等，掌握这些模式可以高效解决大部分算法问题。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MAC.SEARCH",
+    "subject": "coding",
+    "level": "macro",
+    "type": "skill",
+    "name": "搜索与二分",
+    "difficulty": 4,
+    "parents": [],
+    "prereq": [],
+    "tags": ["search", "binary_search"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "搜索算法是解决查找问题的基础，二分搜索通过不变量和单调性保证正确性。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.BACKTRACK",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "回溯算法",
+    "difficulty": 6,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["DFS", "backtracking", "回溯", "子集", "排列组合"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/backtracking.md",
+      "content_summary": "回溯算法是一种通过探索所有可能的候选解来找出所有解的算法。核心思想：选择→递归→撤销。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "核心思想：深度优先搜索(DFS) + 剪枝",
+        "适用场景：排列、组合、子集、棋盘问题",
+        "三要素：路径（已做的选择）、选择列表（可做的选择）、结束条件",
+        "回溯模板：做选择 → 递归 → 撤销选择"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.BIT_OPS",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "位运算",
+    "difficulty": 5,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/bit_ops.md",
+      "content_summary": "位运算直接操作二进制位，速度极快。掌握常见位运算技巧可以优雅地解决很多问题。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "基本运算：与(&)、或(|)、异或(^)、取反(~)、移位(<<, >>)",
+        "n & (n-1)：消除最低位的1",
+        "n & (-n)：获取最低位的1",
+        "异或性质：a^a=0, a^0=a"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.BS_TEMPLATES",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "二分查找模板",
+    "difficulty": 6,
+    "parents": ["COD.MAC.SEARCH"],
+    "prereq": [],
+    "tags": ["binary_search", "invariant", "template"],
+    "common_mistakes": ["混用模板：闭区间的更新规则写成半开区间", "只背代码，不会解释为什么收敛/为什么正确"],
+    "content": {
+      "content_ref": "",
+      "content_summary": "二分查找的两大模板（闭区间/半开区间）与不变量写法，用 lower/upper bound 统一 first/last 等经典变体。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.DP",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "动态规划基础",
+    "difficulty": 5,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["DP", "dp", "动态规划"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/coding_learn_004.md",
+      "content_summary": "动态规划(DP)是解决最优化问题的重要方法。核心思想是将大问题分解为子问题，通过状态转移方程递推求解。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "DP三要素：状态定义、转移方程、初始条件",
+        "状态定义：dp[i]表示以nums[i]结尾的最大子数组和",
+        "转移方程：dp[i] = max(dp[i-1] + nums[i], nums[i])",
+        "空间优化：只需前一个状态，可压缩到O(1)空间"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.HASH",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "哈希表应用",
+    "difficulty": 4,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": ["hash", "哈希表", "数组"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/coding_learn_001.md",
+      "content_summary": "哈希表是一种通过键值对存储数据的数据结构，能够在O(1)时间复杂度内完成查找、插入和删除操作。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "哈希表的核心思想：用空间换时间",
+        "Python中dict就是哈希表的实现",
+        "常见应用：快速查找、去重、计数",
+        "哈希冲突的处理方法"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.LINKED_LIST",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "链表操作",
+    "difficulty": 5,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/linked_list.md",
+      "content_summary": "链表是一种动态数据结构，节点通过指针连接。掌握链表的遍历、插入、删除和合并是解决链表问题的基础。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "链表节点结构：val + next指针",
+        "虚拟头节点(dummy)简化边界处理",
+        "双指针技巧在链表中的应用",
+        "递归与迭代两种思路"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.STACK",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "栈的应用",
+    "difficulty": 4,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": ["stack"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/coding_learn_003.md",
+      "content_summary": "栈是一种后进先出(LIFO)的数据结构，非常适合处理「匹配」类问题，如括号匹配、表达式求值等。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "栈的基本操作：push, pop, peek",
+        "括号匹配的核心：遇左括号入栈，遇右括号出栈匹配",
+        "Python用list模拟栈：append()入栈，pop()出栈",
+        "边界情况：空栈时pop、遍历结束栈非空"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MES.TWO_POINTERS",
+    "subject": "coding",
+    "level": "meso",
+    "type": "skill",
+    "name": "双指针技巧",
+    "difficulty": 4,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["two_pointers"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/coding/coding_learn_002.md",
+      "content_summary": "双指针是处理数组问题的常用技巧，通过两个指针从不同位置或方向遍历数组，可以将O(n²)的暴力解法优化到O(n)。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "对撞指针：两端向中间移动",
+        "快慢指针：同向不同速度移动",
+        "滑动窗口：维护一个动态区间",
+        "适用场景：有序数组、链表环检测、子数组问题"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.ARR01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "数组原地反转",
+    "difficulty": 2,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["array"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "双指针 swap 或 Python 切片实现反转。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BIT01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "异或抵消配对",
+    "difficulty": 3,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": ["bitwise", "xor"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "利用 a^a=0、a^0=a，把成对元素抵消后剩下唯一元素。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BS01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "二分边界与死循环",
+    "difficulty": 6,
+    "parents": ["COD.MES.BS_TEMPLATES"],
+    "prereq": [],
+    "tags": ["binary_search", "boundary", "mid", "termination"],
+    "common_mistakes": ["l == mid 时 l 不变导致死循环", "闭区间/半开区间混写"],
+    "content": {
+      "content_ref": "",
+      "content_summary": "掌握二分终止性的根源：区间表示、mid 取整与更新必须保证区间严格缩小。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BS02",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "单调谓词设计",
+    "difficulty": 6,
+    "parents": ["COD.MES.BS_TEMPLATES"],
+    "prereq": [],
+    "tags": ["binary_search", "predicate", "monotonic"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "把「找答案」改写为「判定谓词 + 单调性 + 边界」，从而稳定套二分模板。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BS03",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "重复元素的首尾位置",
+    "difficulty": 7,
+    "parents": ["COD.MES.BS_TEMPLATES"],
+    "prereq": [],
+    "tags": ["binary_search", "duplicates", "lower_bound", "upper_bound"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "在重复元素存在时，用 lower/upper bound 谓词设计稳定逼近 first/last 边界。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BT01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "回溯生成全排列",
+    "difficulty": 6,
+    "parents": ["COD.MES.BACKTRACK"],
+    "prereq": [],
+    "tags": ["backtracking", "permutation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "用 used 标记 + path，DFS 枚举全排列。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BT02",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "回溯生成子集",
+    "difficulty": 5,
+    "parents": ["COD.MES.BACKTRACK"],
+    "prereq": [],
+    "tags": ["backtracking", "subset"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "递归/迭代生成子集；用 start 控制选择范围避免重复。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.BT03",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "回溯生成组合",
+    "difficulty": 5,
+    "parents": ["COD.MES.BACKTRACK"],
+    "prereq": [],
+    "tags": ["backtracking", "combination"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "从 start 递增选择，path 长度到 k 即收集结果，并可剪枝。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.CNT01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "频率统计",
+    "difficulty": 3,
+    "parents": ["COD.MES.HASH"],
+    "prereq": [],
+    "tags": ["counting"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "先统计频率，再二次遍历找第一个满足条件的元素。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.CTRL01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "条件判断顺序",
+    "difficulty": 1,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["branching"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "多条件命中时先判更强条件（如 15 的倍数先于 3 和 5）。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.DP01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "最大子数组和（Kadane算法）",
+    "difficulty": 5,
+    "parents": ["COD.MES.DP"],
+    "prereq": [],
+    "tags": ["dp", "kadane"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "维护以 i 结尾的最优值并滚动更新全局最优。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.DP02",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "斐波那契式DP",
+    "difficulty": 3,
+    "parents": ["COD.MES.DP"],
+    "prereq": [],
+    "tags": ["dp", "fib"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "dp[i]=dp[i-1]+dp[i-2]，用两个变量滚动即可。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.FS01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "快慢指针判环",
+    "difficulty": 4,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["fast_slow"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "快慢指针相遇判环；本题用数组 next 模拟链表。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.GREEDY01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "贪心维护最小值",
+    "difficulty": 3,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["greedy"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "一次遍历维护历史最小值并更新最大差值。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.HASH01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "哈希查找补数（两数之和）",
+    "difficulty": 5,
+    "parents": ["COD.MES.HASH"],
+    "prereq": [],
+    "tags": ["hash_map", "lookup"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "把两数之和这类问题改写成：遍历 + 查 complement，并维护 value->index 映射。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.INPLACE01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "原地标记法",
+    "difficulty": 5,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["inplace", "marking"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "利用数值映射到索引并原地标记出现过的元素，O(1)额外空间。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.PS01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "前缀和累加",
+    "difficulty": 2,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["prefix_sum"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "一次遍历累加构造 running sum。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.REDUCE01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "行归约取最大",
+    "difficulty": 1,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["reduce"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "对每行求和并取最大值。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.SET01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "集合判重",
+    "difficulty": 2,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": ["set"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "用 set 判重/查找，时间从 O(n²) 降到 O(n)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.SET02",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "集合求交集",
+    "difficulty": 2,
+    "parents": ["COD.MAC.DATA_STRUCT"],
+    "prereq": [],
+    "tags": ["set", "intersection"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "用集合交集或哈希集合求交集，注意去重。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.SIM01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "进位模拟",
+    "difficulty": 3,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["simulation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "从末位向前处理进位，遇到 9 连续进位，必要时扩展数组。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.SIM02",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "规则循环模拟",
+    "difficulty": 2,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["simulation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "按奇偶规则迭代更新并计数。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.STK01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "栈验证括号匹配",
+    "difficulty": 4,
+    "parents": ["COD.MES.STACK"],
+    "prereq": [],
+    "tags": ["stack", "matching"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "用栈维护未匹配的左括号；遇右括号时检查栈顶是否匹配。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.STR01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "字符串替换",
+    "difficulty": 1,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["string"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "使用 replace 等字符串操作完成规则替换。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.TP01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "双指针合并有序数组",
+    "difficulty": 4,
+    "parents": ["COD.MES.TWO_POINTERS"],
+    "prereq": [],
+    "tags": ["two_pointers", "merge"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "双指针逐步消耗两个有序序列并合并，保持整体有序。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.TP02",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "双指针判断回文",
+    "difficulty": 2,
+    "parents": ["COD.MES.TWO_POINTERS"],
+    "prereq": [],
+    "tags": ["two_pointers", "palindrome"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "首尾指针向中间收缩并比较。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.TP03",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "稳定压缩（移动零）",
+    "difficulty": 4,
+    "parents": ["COD.MES.TWO_POINTERS"],
+    "prereq": [],
+    "tags": ["two_pointers", "stable"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "用写指针维护下一个非零位置，保证相对顺序。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "COD.MIC.VOTE01",
+    "subject": "coding",
+    "level": "micro",
+    "type": "skill",
+    "name": "摩尔投票求众数",
+    "difficulty": 5,
+    "parents": ["COD.MAC.PATTERNS"],
+    "prereq": [],
+    "tags": ["moore_voting"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "候选人+计数的抵消思想，线性时间常数空间找到多数元素。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  }
+]

@@ -1,0 +1,2220 @@
+[
+  {
+    "item_id": "MATH.ITEM.M01.V1",
+    "title": "求导：sin(x²)",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\frac{d}{dx}[\\sin(x^2)]",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "链式法则",
+      "求导",
+      "三角函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_CHAIN",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=链式法则"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "2x\\cos(x^2)",
+    "explanation": "**这题在考什么**\n\n- 识别：链式法则（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n2x\\cos(x^2)\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M02.V1",
+    "title": "积分：∫xe^{x²}dx",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\int x e^{x^2}dx",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "换元积分",
+      "积分",
+      "指数函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SUB",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=换元积分"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\frac{1}{2}e^{x^2}+C",
+    "explanation": "**这题在考什么**\n\n- 识别：换元/代换（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\frac{1}{2}e^{x^2}+C\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M03.V1",
+    "title": "极限：(1-cosx)/x²",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2}",
+    "difficulty": 6,
+    "estimated_time_min": 10,
+    "tags": [
+      "泰勒展开",
+      "极限",
+      "三角函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_TAYLOR",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒展开"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\frac{1}{2}",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\frac{1}{2}\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M04.V1",
+    "title": "定积分：∫₀¹1/(1+x²)dx",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\int_0^1 \\frac{1}{1+x^2}dx",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_ATAN",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=反三角函数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\frac{\\pi}{4}",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\frac{\\pi}{4}\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M05.V1",
+    "title": "求导：tanx",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\frac{d}{dx}[\\tan x] = ?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_TRIG_D",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=三角函数求导"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. sec²x",
+      "B. csc²x",
+      "C. -sec²x",
+      "D. -csc²x"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M06.V1",
+    "title": "不定积分结果",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\int e^x dx = ?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_EXP_INT",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=指数积分"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. e^x",
+      "B. e^x + C",
+      "C. xe^x + C",
+      "D. e^{x+1} + C"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M07.V1",
+    "title": "极限sinx/x",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\lim_{x\\to 0}\\frac{\\sin x}{x} = \\underline{\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "极限",
+      "重要极限",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_LIMITS",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=重要极限"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "1",
+        "1.0"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M08.V1",
+    "title": "自然常数e",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\lim_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n = \\underline{\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "极限",
+      "重要极限",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_LIMITS",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=重要极限"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "e",
+        "E",
+        "2.718",
+        "2.71828"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M09.V1",
+    "title": "链式法则应用",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\frac{d}{dx}[e^{\\sin x}] = ?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_CHAIN",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=链式法则"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. e^{sinx}",
+      "B. cosx·e^{sinx}",
+      "C. sinx·e^{cosx}",
+      "D. -sinx·e^{cosx}"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M10.V1",
+    "title": "积分：∫sinx dx",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\int \\sin x \\, dx = \\underline{\\quad} + C",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_BASIC_INT",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=基本积分"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "-cosx",
+        "-cos(x)",
+        "-cos x"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P01.V1",
+    "title": "掷骰子概率",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "掷一枚均匀骰子，点数大于4的概率是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "概率",
+      "古典概率",
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_CLASSIC",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=古典概率"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 1/6",
+      "B. 1/3",
+      "C. 1/2",
+      "D. 2/3"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P02.V1",
+    "title": "独立事件概率",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "A、B独立，P(A)=0.3，P(B)=0.4，求P(A∩B)",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "概率",
+      "独立事件",
+      "probability"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_INDEP",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=独立事件"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "0.12",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n0.12\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P03.V1",
+    "title": "条件概率",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "P(A)=0.5，P(B|A)=0.6，则P(A∩B)=?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "概率",
+      "条件概率",
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_COND",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=条件概率"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 0.1",
+      "B. 0.2",
+      "C. 0.3",
+      "D. 0.6"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P04.V1",
+    "title": "互斥事件",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "A、B互斥，P(A)=0.3，P(B)=0.5，则P(A∪B)=?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "概率",
+      "互斥事件",
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_DISJ",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=互斥事件"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 0.15",
+      "B. 0.2",
+      "C. 0.8",
+      "D. 0.65"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P05.V1",
+    "title": "全概率公式",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "袋中有3白2黑球。先取1球，再取1球（不放回）。求第二次取到白球的概率。",
+    "difficulty": 6,
+    "estimated_time_min": 10,
+    "tags": [
+      "概率",
+      "条件概率",
+      "probability"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_TOTAL",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=全概率公式"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\frac{3}{5}",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\frac{3}{5}\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P06.V1",
+    "title": "期望值计算",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "X服从参数为0.5的伯努利分布，E(X) = \\underline{\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_EX",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=期望"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "0.5",
+        "1/2",
+        "0.50"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P07.V1",
+    "title": "方差计算",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "X~B(n,p)，则Var(X)=?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_VAR",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=方差"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. np",
+      "B. np(1-p)",
+      "C. n(1-p)",
+      "D. p(1-p)"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P08.V1",
+    "title": "正态分布性质",
+    "domain": "math",
+    "format": "math_multi_choice",
+    "prompt": "关于正态分布N(μ,σ²)，正确的是（多选）",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_NORMAL",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=正态分布"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "multi_choice",
+    "options": [
+      "A. 曲线关于x=μ对称",
+      "B. E(X)=μ",
+      "C. Var(X)=σ",
+      "D. σ越大，曲线越扁平"
+    ],
+    "correct_option": "ABD",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P09.V1",
+    "title": "贝叶斯公式",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "某病患病率1%，检测阳性率：有病99%阳性，无病5%阳性。某人阳性，求其患病概率。",
+    "difficulty": 6,
+    "estimated_time_min": 10,
+    "tags": [
+      "概率",
+      "贝叶斯",
+      "条件概率",
+      "probability"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_BAYES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=贝叶斯公式"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\frac{99}{594} \\approx 0.167",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\frac{99}{594} \\approx 0.167\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P10.V1",
+    "title": "排列组合",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "从5人中选3人排成一排，有\\underline{\\quad}种方法",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_PERM",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=排列"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "60"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L01.V1",
+    "title": "矩阵乘法",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "A是2×3矩阵，B是3×4矩阵，则AB是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_MATMUL",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=矩阵乘法"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 2×4矩阵",
+      "B. 3×3矩阵",
+      "C. 4×2矩阵",
+      "D. 不能相乘"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L02.V1",
+    "title": "行列式计算",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\begin{vmatrix}1 & 2 \\\\ 3 & 4\\end{vmatrix} = \\underline{\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_DET2",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=二阶行列式"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "-2"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L03.V1",
+    "title": "特征值",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "求矩阵A=\\begin{pmatrix}2 & 1 \\\\ 0 & 3\\end{pmatrix}的特征值",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_EIG",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=特征值"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\lambda_1=2, \\lambda_2=3",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\lambda_1=2, \\lambda_2=3\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L04.V1",
+    "title": "矩阵的秩",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "3×4矩阵A的秩最大可能是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_RANK",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=矩阵的秩"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 3",
+      "B. 4",
+      "C. 7",
+      "D. 12"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L05.V1",
+    "title": "向量线性相关",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "向量组α₁=(1,0,0)，α₂=(0,1,0)，α₃=(1,1,0)是否线性相关？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_LINDEP",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=线性相关"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 线性相关",
+      "B. 线性无关",
+      "C. 无法判断",
+      "D. 取决于基"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L06.V1",
+    "title": "逆矩阵存在条件",
+    "domain": "math",
+    "format": "math_multi_choice",
+    "prompt": "方阵A可逆的等价条件（多选）",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_INV",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=可逆矩阵"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "multi_choice",
+    "options": [
+      "A. det(A)≠0",
+      "B. rank(A)=n",
+      "C. Ax=0只有零解",
+      "D. A的特征值都不为0"
+    ],
+    "correct_option": "ABCD",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L07.V1",
+    "title": "矩阵转置性质",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "(AB)^T = ?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_TRANSPOSE",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=转置"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. AᵀBᵀ",
+      "B. BᵀAᵀ",
+      "C. (BA)ᵀ",
+      "D. AB"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L08.V1",
+    "title": "正交矩阵",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "若A是正交矩阵，则AᵀA = \\underline{\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_ORTH",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=正交矩阵"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "I",
+        "E",
+        "单位矩阵",
+        "单位阵"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L09.V1",
+    "title": "向量空间维数",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "R³的一个子空间最多有几个线性无关的向量？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_SPACE",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=向量空间"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 无穷"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L10.V1",
+    "title": "克莱姆法则",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "用克莱姆法则解方程组的前提条件是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_CRAMER",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=克莱姆法则"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 系数矩阵是方阵",
+      "B. 行列式≠0",
+      "C. A和B都需要",
+      "D. 无条件"
+    ],
+    "correct_option": "C",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M11.V1",
+    "title": "求导：x^x",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\frac{d}{dx}[x^x]",
+    "difficulty": 6,
+    "estimated_time_min": 10,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_LOGD",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=对数求导"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "x^x(\\ln x + 1)",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\nx^x(\\ln x + 1)\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M12.V1",
+    "title": "分部积分",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\int x e^x dx",
+    "difficulty": 6,
+    "estimated_time_min": 10,
+    "tags": [
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_IBP",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=分部积分"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "xe^x - e^x + C = (x-1)e^x + C",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\nxe^x - e^x + C = (x-1)e^x + C\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M13.V1",
+    "title": "洛必达法则",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\lim_{x\\to 0}\\frac{e^x - 1 - x}{x^2} = ?",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "极限",
+      "洛必达",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_LH",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=洛必达法则"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 0",
+      "B. 1/2",
+      "C. 1",
+      "D. 不存在"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P11.V1",
+    "title": "泊松分布",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "X~P(λ)，则E(X)=?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_POIS",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泊松分布"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. λ",
+      "B. λ²",
+      "C. 1/λ",
+      "D. √λ"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P12.V1",
+    "title": "协方差",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "Cov(X,X) = \\underline{\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_COV",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=协方差"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "Var(X)",
+        "D(X)",
+        "方差"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L11.V1",
+    "title": "迹的性质",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "tr(AB) = tr(\\underline{\\quad})",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_TRACE",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=矩阵的迹"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "BA"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L12.V1",
+    "title": "相似矩阵",
+    "domain": "math",
+    "format": "math_multi_choice",
+    "prompt": "A与B相似，则（多选）",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_SIM",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=相似矩阵"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "multi_choice",
+    "options": [
+      "A. det(A)=det(B)",
+      "B. tr(A)=tr(B)",
+      "C. rank(A)=rank(B)",
+      "D. 特征值相同"
+    ],
+    "correct_option": "ABCD",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M14.V1",
+    "title": "泰勒展开：e^x",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "e^x = 1 + x + \\frac{x^2}{2!} + \\underline{\\quad} + ...",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "泰勒展开",
+      "级数",
+      "指数函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SERIES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "x³/3!",
+        "x^3/6",
+        "x³/6"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M15.V1",
+    "title": "泰勒展开：sinx",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\sin x = x - \\frac{x^3}{3!} + \\underline{\\quad} - ...",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "泰勒展开",
+      "级数",
+      "三角函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SERIES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "x⁵/5!",
+        "x^5/120",
+        "x⁵/120"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M16.V1",
+    "title": "泰勒展开：cosx",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\cos x = 1 - \\frac{x^2}{2!} + \\underline{\\quad} - ...",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "泰勒展开",
+      "级数",
+      "三角函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SERIES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "x⁴/4!",
+        "x^4/24",
+        "x⁴/24"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M17.V1",
+    "title": "泰勒展开：ln(1+x)",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "ln(1+x)的麦克劳林展开式是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "泰勒展开",
+      "级数",
+      "对数函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SERIES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. x + x²/2 + x³/3 + ...",
+      "B. x - x²/2 + x³/3 - ...",
+      "C. 1 + x + x²/2 + ...",
+      "D. 1 - x + x² - ..."
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M18.V1",
+    "title": "泰勒展开求极限",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\lim_{x\\to 0}\\frac{e^x - 1 - x}{x^2}",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "泰勒展开",
+      "极限",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SERIES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\frac{1}{2}",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\frac{1}{2}\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M19.V1",
+    "title": "拉格朗日余项",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "泰勒展开的拉格朗日余项形式是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "泰勒展开",
+      "余项",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SERIES",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=泰勒级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. f^(n+1)(ξ)/(n+1)!·(x-a)^(n+1)",
+      "B. f^(n)(ξ)/n!·(x-a)^n",
+      "C. f(x) - P_n(x)",
+      "D. Σf^(k)(a)/k!·(x-a)^k"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P13.V1",
+    "title": "大数定律",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "大数定律说明的是？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_LLN",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=大数定律"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 样本均值→总体均值",
+      "B. 样本方差→0",
+      "C. 概率→1",
+      "D. 以上都对"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L13.V1",
+    "title": "矩阵分解",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "LU分解中，L是什么类型的矩阵？",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_LU",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=LU分解"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 上三角矩阵",
+      "B. 下三角矩阵",
+      "C. 对角矩阵",
+      "D. 正交矩阵"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M20.V1",
+    "title": "极限：ln(1+x)/x",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\\\lim_{x\\\\to 0}\\\\frac{\\\\ln(1+x)}{x}",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "极限",
+      "泰勒展开",
+      "重要极限",
+      "对数函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_LIMITS",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=重要极限"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "1",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n1\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M21.V1",
+    "title": "导数：ln(x)/x",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\\\frac{d}{dx}\\\\left(\\\\frac{\\\\ln x}{x}\\\\right)",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "求导",
+      "商法则",
+      "对数函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_QUOT",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=商法则"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\\\frac{1-\\\\ln x}{x^2}",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\\\frac{1-\\\\ln x}{x^2}\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M22.V1",
+    "title": "定积分：∫₀^π sinx dx",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\\\int_{0}^{\\\\pi}\\\\sin x\\\\,dx = \\\\underline{\\\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "积分",
+      "定积分",
+      "三角函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_DEF_INT",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=基本定积分"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "2",
+        "2.0"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M23.V1",
+    "title": "换元积分：∫2x/(1+x²)dx",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "\\\\int \\\\frac{2x}{1+x^2}dx",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "换元积分",
+      "积分",
+      "对数函数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_SUB",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=换元积分"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "\\\\ln(1+x^2)+C",
+    "explanation": "**这题在考什么**\n\n- 识别：换元/代换（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\\\\ln(1+x^2)+C\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.M24.V1",
+    "title": "泰勒展开：1/(1-x)",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\\\frac{1}{1-x} \\\\text{ 在 } |x|<1 \\\\text{ 的展开式是？}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "泰勒展开",
+      "级数",
+      "几何级数",
+      "calculus"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.CALC_GEO",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=几何级数"
+      }
+    ],
+    "version": "v1",
+    "category": "calculus",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 1 - x + x^2 - x^3 + ...",
+      "B. 1 + x + x^2 + x^3 + ...",
+      "C. 1 + 2x + 3x^2 + ...",
+      "D. x + x^2 + x^3 + ..."
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：泰勒展开（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P14.V1",
+    "title": "方差性质：Var(aX+b)",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\\\text{若}Y=aX+b，\\\\text{则}\\\\;\\\\mathrm{Var}(Y)=?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "方差",
+      "线性变换",
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_VAR",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=方差"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "single_choice",
+    "options": [
+      "A. a\\\\,Var(X)",
+      "B. a^2Var(X)",
+      "C. Var(X)+b",
+      "D. Var(X)+b^2"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P15.V1",
+    "title": "协方差性质：Cov(X,Y)",
+    "domain": "math",
+    "format": "math_fill",
+    "prompt": "\\\\mathrm{Cov}(X,Y)=E[XY]-E(X)E(Y)。若X与Y独立，则\\\\mathrm{Cov}(X,Y)=\\\\underline{\\\\quad}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "协方差",
+      "期望",
+      "probability"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_COV",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=协方差"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "fill",
+    "options": [],
+    "correct_option": "",
+    "blanks": {
+      "1": [
+        "0",
+        "0.0"
+      ]
+    },
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.P16.V1",
+    "title": "二项分布：P(X=0)",
+    "domain": "math",
+    "format": "math_solve",
+    "prompt": "X\\\\sim B(n,p)，求P(X=0)。",
+    "difficulty": 5,
+    "estimated_time_min": 10,
+    "tags": [
+      "二项分布",
+      "概率",
+      "probability"
+    ],
+    "grader": {
+      "type": "manual"
+    },
+    "variation_axes": [
+      "parameter_change"
+    ],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.PROB_BINOM",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=二项分布"
+      }
+    ],
+    "version": "v1",
+    "category": "probability",
+    "problem_type": "solve",
+    "options": [],
+    "correct_option": "",
+    "blanks": {},
+    "expected_answer_latex": "(1-p)^n",
+    "explanation": "**这题在考什么**\n\n- 识别：概率方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n(1-p)^n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L14.V1",
+    "title": "矩阵可逆：逆的性质",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\\\text{若}A,B\\\\text{均可逆，则}(AB)^{-1}=?",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "逆矩阵",
+      "矩阵运算",
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_INV_RULE",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=逆矩阵"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. A^{-1}B^{-1}",
+      "B. B^{-1}A^{-1}",
+      "C. (A^{-1})(B)",
+      "D. (B^{-1})(A)"
+    ],
+    "correct_option": "B",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：线性代数方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L15.V1",
+    "title": "特征值：相似矩阵",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\\\text{若}A\\\\sim B（相似），\\\\text{则下列正确的是？}",
+    "difficulty": 4,
+    "estimated_time_min": 4,
+    "tags": [
+      "相似矩阵",
+      "特征值",
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_SIM",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=相似矩阵"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. 特征值完全相同",
+      "B. 行列式一定不同",
+      "C. 秩一定不同",
+      "D. 必须有相同特征向量"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：线性代数方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  },
+  {
+    "item_id": "MATH.ITEM.L16.V1",
+    "title": "线性方程组：解的个数",
+    "domain": "math",
+    "format": "math_single_choice",
+    "prompt": "\\\\text{线性方程组}Ax=b\\\\text{有解的充要条件是？}",
+    "difficulty": 6,
+    "estimated_time_min": 4,
+    "tags": [
+      "线性方程组",
+      "秩",
+      "linear_algebra"
+    ],
+    "grader": {
+      "type": "objective"
+    },
+    "variation_axes": [],
+    "knowledge_links": [
+      {
+        "node_id": "MATH.MIC.LA_RANK_SOL",
+        "role": "primary",
+        "weight": 2,
+        "evidence": "来自旧字段 concept=秩判别"
+      }
+    ],
+    "version": "v1",
+    "category": "linear_algebra",
+    "problem_type": "single_choice",
+    "options": [
+      "A. rank(A)=rank([A|b])",
+      "B. det(A)≠0",
+      "C. rank(A)=n",
+      "D. b=0"
+    ],
+    "correct_option": "A",
+    "blanks": {},
+    "expected_answer_latex": "",
+    "explanation": "**这题在考什么**\n\n- 识别：标准方法（从题面结构快速定位套路）\n\n**核心思路**\n\n- 先把表达式改写成『可直接套公式/定理』的形式，再一步到位化简。\n\n**步骤（建议你按这个顺序写）**\n\n1. 明确要用的关键公式/定理（写出来，减少失误）。\n2. 代入/变形并进行必要的化简。\n3. 给出最终结果，并检查量纲/极限/符号是否合理。\n\n**参考答案**\n\n$$\n\n$$\n\n**例题对照（帮助你迁移）**\n\n- 把题中某个常量换掉（例如把 $x^2$ 换成 $3x^2$），步骤完全相同，只是链式/系数会变化。\n\n**应用场景**\n\n- 常见于：求导求极值、积分换元、极限估计、误差近似等。\n\n**常见坑**\n\n- 忘记关键系数（如链式法则里的 $u'$）。\n- 展开/化简时丢掉 $o(x^2)$ 或常数 $+C$。\n- 只写结论不写中间关键一步（自检困难）。\n",
+    "rubric": [],
+    "sympy_check": null
+  }
+]

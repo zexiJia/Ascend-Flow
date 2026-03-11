@@ -1,0 +1,971 @@
+[
+  {
+    "node_id": "DL.MAC.BASICS",
+    "subject": "deeplearning",
+    "level": "macro",
+    "type": "skill",
+    "name": "神经网络基础",
+    "difficulty": 4,
+    "parents": [],
+    "prereq": [],
+    "tags": ["nn", "activation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "神经网络是深度学习的基础，包括神经元、层、激活函数等核心概念。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MAC.CNN",
+    "subject": "deeplearning",
+    "level": "macro",
+    "type": "skill",
+    "name": "卷积神经网络",
+    "difficulty": 5,
+    "parents": [],
+    "prereq": [],
+    "tags": ["cnn"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "CNN通过卷积操作提取局部特征，是图像处理的核心架构。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MAC.SEQ",
+    "subject": "deeplearning",
+    "level": "macro",
+    "type": "skill",
+    "name": "序列模型",
+    "difficulty": 6,
+    "parents": [],
+    "prereq": [],
+    "tags": ["rnn", "lstm"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "RNN/LSTM用于处理序列数据，能够记住历史信息。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MAC.TRAIN",
+    "subject": "deeplearning",
+    "level": "macro",
+    "type": "skill",
+    "name": "训练与优化",
+    "difficulty": 5,
+    "parents": [],
+    "prereq": [],
+    "tags": ["optimization"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "模型训练涉及优化器、损失函数、正则化等关键技术。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MAC.TRANSFORMER",
+    "subject": "deeplearning",
+    "level": "macro",
+    "type": "skill",
+    "name": "注意力与Transformer",
+    "difficulty": 7,
+    "parents": [],
+    "prereq": [],
+    "tags": ["attention", "transformer"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "Transformer是GPT、BERT等大模型的基础架构，完全基于注意力机制。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.ACTIVATION",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "激活函数与损失函数",
+    "difficulty": 4,
+    "parents": ["DL.MAC.BASICS"],
+    "prereq": [],
+    "tags": ["activation", "loss"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "激活函数引入非线性，损失函数衡量模型预测与真实值的差距。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.ATTN",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "自注意力机制",
+    "difficulty": 7,
+    "parents": ["DL.MAC.TRANSFORMER"],
+    "prereq": [],
+    "tags": ["attention"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "自注意力计算序列中每个位置对其他位置的关注度，是Transformer的核心。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.BACKPROP",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "反向传播算法",
+    "difficulty": 5,
+    "parents": ["DL.MAC.BASICS"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/backprop.md",
+      "content_summary": "反向传播是训练神经网络的核心算法。通过链式法则计算梯度，然后用梯度下降更新参数。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "损失函数：衡量预测与真实值的差距",
+        "链式法则：复合函数求导，从输出层反向传播",
+        "梯度下降：w = w - lr × ∂L/∂w",
+        "自动微分：PyTorch的autograd自动计算梯度"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.CNN_CORE",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "卷积层核心操作",
+    "difficulty": 5,
+    "parents": ["DL.MAC.CNN"],
+    "prereq": [],
+    "tags": ["conv", "pool"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "卷积层通过滑动窗口提取局部特征，池化层降维增加平移不变性。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.CNN_INTRO",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "CNN架构概览",
+    "difficulty": 5,
+    "parents": ["DL.MAC.CNN"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/cnn_intro.md",
+      "content_summary": "CNN通过卷积操作提取局部特征，特别适合图像处理任务。卷积层、池化层、全连接层组成典型CNN架构。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "卷积操作：滑动窗口提取局部特征",
+        "卷积核(filter)：可学习的特征检测器",
+        "池化层：降维，增加平移不变性",
+        "经典架构：LeNet, AlexNet, VGG, ResNet"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.LOSSES",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "损失函数选择",
+    "difficulty": 5,
+    "parents": ["DL.MAC.BASICS"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/losses.md",
+      "content_summary": "损失函数衡量模型预测与真实值的差距，是训练神经网络的目标函数。不同任务需要选择合适的损失函数。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "MSE(均方误差)：回归任务常用",
+        "CrossEntropy(交叉熵)：分类任务常用",
+        "BCELoss：二分类任务",
+        "损失函数的选择影响模型的优化方向"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.NN_BASICS",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "神经网络入门",
+    "difficulty": 5,
+    "parents": ["DL.MAC.BASICS"],
+    "prereq": [],
+    "tags": ["激活函数", "神经网络基础"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/nn_basics.md",
+      "content_summary": "神经网络是深度学习的基础。理解神经元、层、激活函数等概念是学习深度学习的第一步。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "神经元：接收输入，加权求和，经激活函数输出",
+        "前向传播：输入层 → 隐藏层 → 输出层",
+        "激活函数：引入非线性，如ReLU, Sigmoid, Tanh",
+        "全连接层：每个神经元与上一层所有神经元相连"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.OPT",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "优化器与正则化",
+    "difficulty": 5,
+    "parents": ["DL.MAC.TRAIN"],
+    "prereq": [],
+    "tags": ["adam", "dropout", "l2"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/dl_learn_007.md",
+      "content_summary": "优化器决定了如何根据梯度更新模型参数。不同优化器有不同的收敛特性和适用场景。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "SGD：最基本的梯度下降，可加动量加速收敛",
+        "Adam：结合动量和自适应学习率，最常用",
+        "学习率调度：随训练进行调整学习率",
+        "权重衰减(L2正则化)：防止过拟合"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.RECEPTIVE_FIELD",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "感受野",
+    "difficulty": 5,
+    "parents": ["DL.MAC.CNN"],
+    "prereq": [],
+    "tags": ["CNN", "卷积", "感受野"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/receptive_field.md",
+      "content_summary": "感受野是CNN中的核心概念，指的是神经网络中某一层的输出特征图上的一个像素点，对应到输入图像上的区域大小。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "定义：输出特征图上一个点「看到」的输入区域大小",
+        "局部感受野：卷积核大小决定的直接感受范围",
+        "有效感受野：随着网络加深，感受野不断扩大",
+        "空洞卷积：不增加参数量的情况下扩大感受野"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.REGULARIZATION",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "正则化技术",
+    "difficulty": 5,
+    "parents": ["DL.MAC.TRAIN"],
+    "prereq": [],
+    "tags": [],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/regularization.md",
+      "content_summary": "正则化技术用于防止模型过拟合，提高泛化能力。Dropout、权重衰减、数据增强是常用方法。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "Dropout：训练时随机丢弃神经元，测试时关闭",
+        "Batch Normalization：标准化层输入，加速训练",
+        "权重衰减(L2正则化)：限制权重大小",
+        "数据增强：扩充训练数据多样性"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.SEQ",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "循环神经网络",
+    "difficulty": 6,
+    "parents": ["DL.MAC.SEQ"],
+    "prereq": [],
+    "tags": ["rnn", "lstm"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/dl_learn_004.md",
+      "content_summary": "RNN通过循环结构处理序列数据，能够记住历史信息。LSTM和GRU解决了原始RNN的梯度消失问题。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "隐藏状态：h_t = f(h_{t-1}, x_t)，记录历史信息",
+        "LSTM：引入门控机制，包括遗忘门、输入门、输出门",
+        "GRU：简化版LSTM，只有重置门和更新门",
+        "双向RNN：同时考虑前后文信息"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MES.TRANSFORMER_INTRO",
+    "subject": "deeplearning",
+    "level": "meso",
+    "type": "skill",
+    "name": "Transformer架构",
+    "difficulty": 5,
+    "parents": ["DL.MAC.TRANSFORMER"],
+    "prereq": [],
+    "tags": ["Transformer", "注意力机制"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "knowledge/content/deeplearning/transformer.md",
+      "content_summary": "Transformer抛弃了RNN的循环结构，完全基于注意力机制。它是GPT、BERT等大模型的基础架构。",
+      "learning_objectives": [],
+      "key_takeaways": [
+        "自注意力(Self-Attention)：计算序列中每个位置对其他位置的关注度",
+        "多头注意力：并行多个注意力头，捕获不同方面的依赖关系",
+        "位置编码：为无序的注意力机制添加位置信息",
+        "Encoder-Decoder架构：编码器理解输入，解码器生成输出"
+      ],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.ACT01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "激活函数引入非线性",
+    "difficulty": 3,
+    "parents": ["DL.MES.ACTIVATION"],
+    "prereq": [],
+    "tags": ["激活函数", "activation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "理解无激活时网络退化为线性；激活提供非线性表达能力。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.ACT02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "ReLU激活函数实现",
+    "difficulty": 2,
+    "parents": ["DL.MES.ACTIVATION"],
+    "prereq": [],
+    "tags": ["ReLU激活函数", "relu"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "ReLU(x)=max(0,x)，注意边界 x=0。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.ACT03",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "Sigmoid函数实现与理解",
+    "difficulty": 3,
+    "parents": ["DL.MES.ACTIVATION"],
+    "prereq": [],
+    "tags": ["Sigmoid", "sigmoid"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "σ(x)=1/(1+e^{-x})，导数最大 0.25。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.ATTN01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "Q/K/V含义理解",
+    "difficulty": 5,
+    "parents": ["DL.MES.ATTN"],
+    "prereq": [],
+    "tags": ["注意力机制", "attention"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "Self-attention 中 Q=Query, K=Key, V=Value。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.ATTN02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "Transformer并行优势",
+    "difficulty": 6,
+    "parents": ["DL.MAC.TRANSFORMER"],
+    "prereq": [],
+    "tags": ["Transformer", "transformer"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "相对 RNN 可并行计算，训练更快。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.BP01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "梯度消失原理",
+    "difficulty": 5,
+    "parents": ["DL.MAC.TRAIN"],
+    "prereq": [],
+    "tags": ["梯度消失", "vanishing"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "深层反传梯度连乘衰减；sigmoid导数最大 0.25。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.BP02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "反向传播与链式法则",
+    "difficulty": 5,
+    "parents": ["DL.MES.BACKPROP"],
+    "prereq": [],
+    "tags": ["反向传播", "backprop"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "核心是链式法则，沿计算图逐边传播梯度。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.CNN01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "卷积输出尺寸计算",
+    "difficulty": 4,
+    "parents": ["DL.MES.CNN_CORE"],
+    "prereq": [],
+    "tags": ["卷积层", "conv"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "输出尺寸公式：(W-K+2P)/S+1。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.CNN02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "池化层原理",
+    "difficulty": 3,
+    "parents": ["DL.MES.CNN_CORE"],
+    "prereq": [],
+    "tags": ["池化层", "pool"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "MaxPool 在窗口取最大值，降采样减少计算。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.CNN03",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "卷积层参数量计算",
+    "difficulty": 5,
+    "parents": ["DL.MES.CNN_CORE"],
+    "prereq": [],
+    "tags": ["卷积层参数", "params"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "参数量=K*K*C_in*C_out（可加 bias）。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.CNN04",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "感受野堆叠",
+    "difficulty": 5,
+    "parents": ["DL.MES.RECEPTIVE_FIELD"],
+    "prereq": [],
+    "tags": ["感受野", "receptive_field"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "多层卷积叠加扩大感受野；两个3x3等效5x5。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.CNN05",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "残差连接",
+    "difficulty": 6,
+    "parents": ["DL.MAC.CNN"],
+    "prereq": [],
+    "tags": ["残差网络", "resnet"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "跳跃连接帮助梯度传播，缓解深层退化。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.DATA01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "数据增强",
+    "difficulty": 3,
+    "parents": ["DL.MAC.TRAIN"],
+    "prereq": [],
+    "tags": ["数据增强", "augmentation"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "随机裁剪/翻转/颜色抖动等提升泛化，不改变标签语义。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.ENS01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "模型集成",
+    "difficulty": 4,
+    "parents": ["DL.MAC.TRAIN"],
+    "prereq": [],
+    "tags": ["模型集成", "ensemble"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "多个模型投票/平均提升稳定性与泛化。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.GEN01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "过拟合与解决方案",
+    "difficulty": 3,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["过拟合", "overfit"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "增数据、正则化、dropout、early stopping 等。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.LOSS01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "Softmax性质与实现",
+    "difficulty": 4,
+    "parents": ["DL.MES.ACTIVATION"],
+    "prereq": [],
+    "tags": ["Softmax", "softmax"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "输出为概率分布且求和为1；实现时注意数值稳定。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.LOSS02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "交叉熵损失",
+    "difficulty": 4,
+    "parents": ["DL.MES.ACTIVATION"],
+    "prereq": [],
+    "tags": ["交叉熵损失", "cross_entropy"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "预测完全正确→ loss=0；常与 softmax 结合。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.LOSS03",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "MSE损失实现",
+    "difficulty": 2,
+    "parents": ["DL.MES.ACTIVATION"],
+    "prereq": [],
+    "tags": ["均方误差", "mse"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "MSE=mean((y_pred-y_true)²)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.NLP01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "词嵌入层",
+    "difficulty": 4,
+    "parents": ["DL.MAC.BASICS"],
+    "prereq": [],
+    "tags": ["词嵌入", "embedding"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "把离散 token id 映射到稠密向量空间。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.OPT01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "学习率调节",
+    "difficulty": 3,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["学习率", "lr"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "学习率过大易震荡/发散，过小收敛慢。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.OPT02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "Adam优化器原理",
+    "difficulty": 5,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["Adam优化器", "adam"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "Adam 结合 Momentum 与 RMSProp，维护一阶/二阶矩估计。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.OPT03",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "梯度裁剪",
+    "difficulty": 4,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["梯度裁剪", "clip"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "限制梯度范数，防止梯度爆炸。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.REG01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "Dropout行为",
+    "difficulty": 3,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["Dropout", "dropout"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "训练时随机置零神经元输出以正则化。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.REG02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "BatchNorm位置",
+    "difficulty": 4,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["Batch Normalization", "bn"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "典型顺序：Conv/FC → BN → Activation。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.REG03",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "L2正则化",
+    "difficulty": 3,
+    "parents": ["DL.MES.OPT"],
+    "prereq": [],
+    "tags": ["L2正则化", "l2"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "L2=λ/2 × sum(w²)。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.SEQ01",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "RNN长依赖问题",
+    "difficulty": 5,
+    "parents": ["DL.MES.SEQ"],
+    "prereq": [],
+    "tags": ["循环神经网络", "rnn"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "标准 RNN 难以捕捉长依赖（梯度消失/爆炸）。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  },
+  {
+    "node_id": "DL.MIC.SEQ02",
+    "subject": "deeplearning",
+    "level": "micro",
+    "type": "skill",
+    "name": "LSTM门控机制",
+    "difficulty": 5,
+    "parents": ["DL.MES.SEQ"],
+    "prereq": [],
+    "tags": ["LSTM", "lstm"],
+    "common_mistakes": [],
+    "content": {
+      "content_ref": "",
+      "content_summary": "门控机制缓解长期依赖；三门之一是遗忘门。",
+      "learning_objectives": [],
+      "key_takeaways": [],
+      "worked_examples_refs": [],
+      "quick_checks_refs": []
+    },
+    "version": "v1"
+  }
+]
