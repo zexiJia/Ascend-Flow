@@ -11,7 +11,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import requests
 
 DEFAULT_MODEL = "gpt-4o"
-DEFAULT_ENDPOINT = " "
+DEFAULT_ENDPOINT = ""
 
 
 def _calc_authorization(source: str, appkey: str) -> Tuple[str, str]:
